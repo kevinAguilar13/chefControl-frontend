@@ -65,6 +65,12 @@ body{
     padding:40px 25px;
     text-align:center;
     min-height:250px;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
 }
 
 .service-icon{

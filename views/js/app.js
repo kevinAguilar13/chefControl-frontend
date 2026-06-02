@@ -1,5 +1,340 @@
-const API_URL = "http://localhost:8080/api";
+<!DOCTYPE html>
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("ChefControl iniciado");
-});
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefControl</title>
+
+```
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/views/css/style.css">
+```
+
+</head>
+
+<body>
+
+```
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand logo" href="#">
+            ChefControl
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#productos">
+                        Carta
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">
+                        Servicios
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center min-vh-100">
+
+            <div class="col-lg-6">
+
+                <span class="hero-badge">
+                    EXPERIENCIA GASTRONÓMICA
+                </span>
+
+                <h1 class="display-2 fw-bold">
+                    ChefControl
+                </h1>
+
+                <p class="lead">
+                    Donde la tradición culinaria se encuentra con la innovación.
+                    Disfruta de una experiencia gastronómica única.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="#productos" class="btn btn-gold">
+                        Ver Carta
+                    </a>
+
+                    <button class="btn btn-outline-light">
+                        Ordenar Delivery
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?w=900"
+                    class="img-fluid hero-image"
+                    alt="Comida">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="productos" class="productos py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Nuestra Carta
+            </h2>
+
+            <p class="section-subtitle">
+                Productos cargados desde la API de ChefControl
+            </p>
+
+        </div>
+
+        <div id="productos-container" class="row g-4">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="servicios" class="services-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Nuestros Servicios
+            </h2>
+
+            <p class="section-subtitle">
+                Disfruta de la mejor experiencia gastronómica
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🍽️
+                    </div>
+
+                    <h4>Atención en Local</h4>
+
+                    <p>
+                        Disfruta nuestros productos en un ambiente cómodo y elegante.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🛵
+                    </div>
+
+                    <h4>Delivery</h4>
+
+                    <p>
+                        Recibe tus pedidos directamente en tu hogar.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📋
+                    </div>
+
+                    <h4>Gestión de Pedidos</h4>
+
+                    <p>
+                        Realiza y consulta pedidos fácilmente desde nuestra plataforma.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ⭐
+                    </div>
+
+                    <h4>Calidad Garantizada</h4>
+
+                    <p>
+                        Productos preparados con ingredientes de primera calidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contacto" class="contact-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Visítanos
+            </h2>
+
+        </div>
+
+        <div class="row justify-content-center g-4">
+
+            <div class="col-lg-3">
+
+                <div class="contact-card">
+
+                    <h4>📍 Ubicación</h4>
+
+                    <p>
+                        Arequipa, Perú
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="contact-card">
+
+                    <h4>🕒 Horario</h4>
+
+                    <p>
+                        Lunes a Domingo
+                        <br>
+                        08:00 AM - 10:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="contact-card">
+
+                    <h4>📞 Contacto</h4>
+
+                    <p>
+                        +51 999 999 999
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-4">
+
+                <h5 class="footer-logo">
+                    ChefControl
+                </h5>
+
+            </div>
+
+            <div class="col-md-4 text-center">
+
+                © 2026 ChefControl
+
+            </div>
+
+            <div class="col-md-4 text-end">
+
+                <a href="/login.html" class="staff-link">
+                    Acceso Staff
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="/views/js/app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+```
+
+</body>
+
+</html>
